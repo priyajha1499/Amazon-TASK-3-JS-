@@ -371,10 +371,10 @@ Array.from(sfil).forEach((element) => {
   element.addEventListener("click", (e) => {
     list.innerHTML = "";
     let i = 0;
-    const targetRank = parseInt(e.target.innerHTML.split("")[0]);
+    const starrating = parseFloat(e.target.innerHTML.split("")[0]);
 
     allproducts.forEach((element) => {
-      if (parseInt(element.stars) == targetRank) {
+      if (parseFloat(element.stars) == starrating) {
         list.innerHTML += productcards(element);
         i += 1;
       }
